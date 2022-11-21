@@ -534,7 +534,8 @@ advantages-card:nth-child(4n) {
   color: var(--primary-white-color);
 }
 
-.footer-social-header {
+.footer-social-header,
+.signpost-form-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -549,6 +550,71 @@ advantages-card:nth-child(4n) {
 }
 .social-link-footer {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.signpost-form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.form-email {
+  display: block;
+  margin: 0;
+  padding: 16px 15px;
+  min-width: 358px;
+  min-height: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  color: var(--primary-white-color);
+  background-color: var(--background-color-dark);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+/* .form-email:focus + .label-footer-email,
+.form-email:not(:placeholder-shown) + .label-footer-email{
+  transform: ;
+
+} */
+
+.form-email:placeholder-shown {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.button-signpost-form {
+  display: flex;
+  min-width: 200px;
+  min-height: 50px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+  background: var(--accent-color);
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px;
+}
+.icon-send-footer {
+  display: inline-block;
 }
 
 /* Портфоліо. Фільтр-ліст */
@@ -695,6 +761,8 @@ advantages-card:nth-child(4n) {
   transform: translateX(-50%) translateY(-50%);
   width: 528px;
   height: 581px;
+
+  padding: 40px;
   background-color: var(--primary-white-color);
   border-radius: 4px;
   transition: transform 500ms, opacity 500ms;
@@ -724,4 +792,176 @@ advantages-card:nth-child(4n) {
 
 .close-modal {
   fill: #000000;
+}
+
+.modal-header {
+  display: block;
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--title-text-color);
+}
+
+.modal-form-group {
+  margin-bottom: 20px;
+}
+.modal-form-label {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--primary-text-color);
+
+  margin-bottom: 4px;
+}
+
+.modal-form-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.modal-form-field {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  padding-right: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+
+  transition: outline 250ms var(--accent-color);
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  transition: fill 250ms var(--accent-color);
+}
+
+.modal-form-field:focus {
+  outline: 1px solid var(--accent-color);
+}
+
+.modal-form-field:focus + .modal-form-icon {
+  fill: var(--accent-color);
+}
+
+.modal-form-message {
+  display: block;
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+  transition: outline 250ms var(--accent-color);
+
+  padding: 12px 16px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--primary-text-color);
+}
+
+.modal-form-message::placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form-message:focus {
+  outline: 1px solid var(--accent-color);
+}
+
+.modal-form-agreement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 30px;
+}
+
+.modal-form-agreement-desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+  user-select: none;
+}
+
+.button-modal-form {
+  display: block;
+  min-width: 200px;
+  min-height: 50px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+  background: var(--accent-color);
+  cursor: pointer;
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-form-agreement-link {
+  color: var(--accent-color);
+  text-underline-offset: 4px;
+}
+
+.modal-form-checkbox {
+  appearance: none;
+  width: 16px;
+  height: 15px;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+  border: 1px solid transparent;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.2222 1.66667V13.3333H1.77778V1.66667H14.2222ZM14.2222 0H1.77778C0.8 0 0 0.75 0 1.66667V13.3333C0 14.25 0.8 15 1.77778 15H14.2222C15.2 15 16 14.25 16 13.3333V1.66667C16 0.75 15.2 0 14.2222 0Z' fill='%23212121'/%3E%3C/svg%3E%0A");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px 15px;
+
+  transition: background-size 250ms var(--timing-function);
+  background-color: 250ms var(--timing-function);
+  outline-color: 250ms var(--timing-function);
+}
+
+.modal-form-checkbox:checked {
+  outline-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E");
+  background-size: 11px 8px;
 }
