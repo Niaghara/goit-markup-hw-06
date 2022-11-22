@@ -788,7 +788,7 @@ advantages-card:nth-child(4n) {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: border 250ms var(--timing-function);
+
 }
 
 .close-modal {
@@ -796,9 +796,6 @@ advantages-card:nth-child(4n) {
   transition: fill 250ms var(--timing-function);
 }
 
-.modal-btn:hover {
-  border: 1px solid var(--accent-color);
-}
 
 .modal-btn:hover .close-modal {
 fill: var(--accent-color);
